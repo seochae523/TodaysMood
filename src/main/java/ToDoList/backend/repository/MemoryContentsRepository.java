@@ -14,14 +14,16 @@ public class MemoryContentsRepository implements ContentsRepository{
 
 
 
+
     @Override
     public void saveContents(TodaysMood todaysMood) {
+
         store.put(todaysMood.getDate(), todaysMood);
     }
 
     @Override
     public void correnction(TodaysMood todaysMood) {
-
+        store.replace(todaysMood.getDate(), todaysMood);
     }
 
     @Override
@@ -30,6 +32,12 @@ public class MemoryContentsRepository implements ContentsRepository{
     }
     @Override
     public void delete(String date) {
+
         store.remove(date);
+    }
+
+    @Override
+    public TodaysMood findOne(String date){
+        return store.get(date);
     }
 }

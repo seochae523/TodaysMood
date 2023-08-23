@@ -14,4 +14,6 @@ public interface ContentsRepository {
 
     List<TodaysMood> findAll();
     void delete(String date);
+
+    TodaysMood findOne(String date);
 }
