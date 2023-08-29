@@ -22,7 +22,7 @@ public class mainController {
     @ResponseBody
     @PostMapping("todaysMood/save")
     public String saveContents(@RequestBody TodaysMood newMood){
-        log.info("moods -> date = {}, contents = {}, mood = {}", newMood.getDate(), newMood.getContext(), newMood.getMood());
+        log.info("moods -> title = {},  date = {}, contents = {}, mood = {}", newMood.getTitle(), newMood.getDate(), newMood.getContext(), newMood.getMood());
         contentsRepository.saveContents(newMood);
 
         return "ok";

@@ -7,6 +7,7 @@ import lombok.Setter;
 @Setter
 public class TodaysMood {
     private String date;
+    private String title;
     private String context;
     private String color;
     private int mood;
