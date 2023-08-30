@@ -11,4 +11,5 @@ public class TodaysMood {
     private String context;
     private String color;
     private int mood;
+
 }

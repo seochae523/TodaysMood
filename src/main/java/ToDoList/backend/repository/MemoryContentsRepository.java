@@ -40,4 +40,17 @@ public class MemoryContentsRepository implements ContentsRepository{
     public TodaysMood findOne(String date){
         return store.get(date);
     }
+
+    @Override
+    public double calculateTotalMood() {
+        if(store.size()==0){
+            return -1;
+        }
+        double moods = 0;
+        for(String key : store.keySet()){
+            moods += store.get(key).getMood();
+        }
+
+        return moods / store.size();
+    }
 }

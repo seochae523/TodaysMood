@@ -16,4 +16,6 @@ public interface ContentsRepository {
     void delete(String date);
 
     TodaysMood findOne(String date);
+
+    double calculateTotalMood();
 }
