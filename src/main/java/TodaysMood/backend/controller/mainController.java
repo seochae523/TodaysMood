@@ -1,17 +1,12 @@
-package ToDoList.backend.controller;
+package TodaysMood.backend.controller;
 
-import ToDoList.backend.domain.TodaysMood;
-import ToDoList.backend.repository.MemoryContentsRepository;
-import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonArrayFormatVisitor;
-import com.fasterxml.jackson.databind.util.JSONPObject;
+import TodaysMood.backend.domain.TodaysMood;
+import TodaysMood.backend.repository.MemoryContentsRepository;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.tomcat.util.json.JSONParser;
 //import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 @Slf4j
 @RestController

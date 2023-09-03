@@ -1,4 +1,4 @@
-package ToDoList.backend;
+package TodaysMood.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,9 +1,8 @@
-package ToDoList.backend.repository;
+package TodaysMood.backend.repository;
 
-import ToDoList.backend.domain.TodaysMood;
+import TodaysMood.backend.domain.TodaysMood;
 
 import java.util.List;
-import java.util.Map;
 
 
 public interface ContentsRepository {

@@ -1,6 +1,6 @@
-package ToDoList.backend.repository;
+package TodaysMood.backend.repository;
 
-import ToDoList.backend.domain.TodaysMood;
+import TodaysMood.backend.domain.TodaysMood;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;

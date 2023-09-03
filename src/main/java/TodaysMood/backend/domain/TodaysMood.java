@@ -1,4 +1,4 @@
-package ToDoList.backend.domain;
+package TodaysMood.backend.domain;
 
 import lombok.Getter;
 import lombok.Setter;
