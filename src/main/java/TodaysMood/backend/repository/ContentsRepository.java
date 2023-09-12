@@ -11,7 +11,7 @@ public interface ContentsRepository {
 
     void correnction(TodaysMood todaysMood);
 
-    List<TodaysMood> findAll();
+    List<TodaysMood> findAll(String name);
     void delete(String date);
 
     TodaysMood findOne(String date);

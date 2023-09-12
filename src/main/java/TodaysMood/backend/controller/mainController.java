@@ -15,7 +15,7 @@ public class mainController {
 
 
     @ResponseBody
-    @PostMapping("todaysMood/save")
+    @PostMapping("/save")
     public String saveContents(@RequestBody TodaysMood newMood){
         log.info("moods -> title = {},  date = {}, contents = {}, mood = {}", newMood.getTitle(), newMood.getDate(), newMood.getContext(), newMood.getMood());
         contentsRepository.saveContents(newMood);
@@ -24,15 +24,16 @@ public class mainController {
     }
 
     @ResponseBody
-    @GetMapping("todaysMood/list")
-    public List<TodaysMood> getAllTodaysMoods(){
-        log.info("repo => {}", contentsRepository.findAll());
-        return contentsRepository.findAll();
+    @PostMapping("/list")
+    public List<TodaysMood> getAllTodaysMoods(@RequestBody String name){
+
+        log.info("repo => {}", contentsRepository.findAll(name));
+        return contentsRepository.findAll(name);
 
     }
 
     @ResponseBody
-    @PostMapping("/todaysMood/delete")
+    @PostMapping("/delete")
     public String deleteContent(@RequestBody String date){
         log.info("date = {}", date.substring(0,10));
         contentsRepository.delete(date.substring(0,10));
@@ -40,7 +41,7 @@ public class mainController {
     }
 
     @ResponseBody
-    @PostMapping("todaysMood/correction")
+    @PostMapping("/correction")
     public String correctContent(@RequestBody TodaysMood todaysMood){
         contentsRepository.correnction(todaysMood);
         return "corrected";

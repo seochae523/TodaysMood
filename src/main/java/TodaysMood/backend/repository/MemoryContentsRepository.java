@@ -27,8 +27,15 @@ public class MemoryContentsRepository implements ContentsRepository{
     }
 
     @Override
-    public List<TodaysMood> findAll(){
-        return new ArrayList<>(store.values());
+    public List<TodaysMood> findAll(String name){
+        List<TodaysMood> moodList = new ArrayList<>();
+        for (TodaysMood value : store.values()) {
+            if(value.getAuthor() == name){
+                moodList.add(value);
+            }
+        }
+
+        return moodList;
     }
     @Override
     public void delete(String date) {

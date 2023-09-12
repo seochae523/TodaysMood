@@ -10,6 +10,7 @@ public class TodaysMood {
     private String title;
     private String context;
     private String color;
+    private String author;
     private int mood;
 
 }
